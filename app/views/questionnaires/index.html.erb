@@ -1,0 +1,75 @@
+<% title "Questionnaires" %>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Last Name</th>
+    <th>First Name</th>
+    <th>Middle Name</th>
+    <th>Ssn</th>
+    <th>Related</th>
+    <th>Primary Contact Number</th>
+    <th>Secondary Contact Number</th>
+    <th>Work School Different Name</th>
+    <th>Same Address Current Employee</th>
+    <th>Home Address</th>
+    <th>Zip Code</th>
+    <th>How Long At Address</th>
+    <th>Unemployment Periods</th>
+    <th>Employment Dates And Company Names</th>
+    <th>Schools During Unemployment</th>
+    <th>Work For Cash</th>
+    <th>Report Cash Wages</th>
+    <th>Terminated Laid Off Details</th>
+    <th>Failed Drug Screen</th>
+    <th>Convicted Or Deferred Adjudication</th>
+    <th>Valid Drivers License</th>
+    <th>Why No Valid Dl</th>
+    <th>License Clear</th>
+    <th>Years Driving Experience</th>
+    <th>Reliable Transporation</th>
+    <th>Refused Airport Badge</th>
+    <th>Check List Physical Tasks</th>
+    <th>Check List Work Environments</th>
+    <th>Email Address</th>
+  </tr>
+  <% for questionnaire in @questionnaires %>
+    <tr>
+      <td><%= questionnaire.date %></td>
+      <td><%= questionnaire.last_name %></td>
+      <td><%= questionnaire.first_name %></td>
+      <td><%= questionnaire.middle_name %></td>
+      <td><%= questionnaire.ssn %></td>
+      <td><%= questionnaire.related %></td>
+      <td><%= questionnaire.primary_contact_number %></td>
+      <td><%= questionnaire.secondary_contact_number %></td>
+      <td><%= questionnaire.work_school_different_name %></td>
+      <td><%= questionnaire.same_address_current_employee %></td>
+      <td><%= questionnaire.home_address %></td>
+      <td><%= questionnaire.zip_code %></td>
+      <td><%= questionnaire.how_long_at_address %></td>
+      <td><%= questionnaire.unemployment_periods %></td>
+      <td><%= questionnaire.employment_dates_and_company_names %></td>
+      <td><%= questionnaire.schools_during_unemployment %></td>
+      <td><%= questionnaire.work_for_cash %></td>
+      <td><%= questionnaire.report_cash_wages %></td>
+      <td><%= questionnaire.terminated_laid_off_details %></td>
+      <td><%= questionnaire.failed_drug_screen %></td>
+      <td><%= questionnaire.convicted_or_deferred_adjudication %></td>
+      <td><%= questionnaire.valid_drivers_license %></td>
+      <td><%= questionnaire.why_no_valid_dl %></td>
+      <td><%= questionnaire.license_clear %></td>
+      <td><%= questionnaire.years_driving_experience %></td>
+      <td><%= questionnaire.reliable_transporation %></td>
+      <td><%= questionnaire.refused_airport_badge %></td>
+      <td><%= questionnaire.check_list_physical_tasks %></td>
+      <td><%= questionnaire.check_list_work_environments %></td>
+      <td><%= questionnaire.email_address %></td>
+      <td><%= link_to "Show", questionnaire %></td>
+      <td><%= link_to "Edit", edit_questionnaire_path(questionnaire) %></td>
+      <td><%= link_to "Destroy", questionnaire, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Questionnaire", new_questionnaire_path %></p>

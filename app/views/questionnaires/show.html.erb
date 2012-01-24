@@ -1,0 +1,128 @@
+<% title "Questionnaire" %>
+
+<p>
+  <strong>Date:</strong>
+  <%= @questionnaire.date %>
+</p>
+<p>
+  <strong>Last Name:</strong>
+  <%= @questionnaire.last_name %>
+</p>
+<p>
+  <strong>First Name:</strong>
+  <%= @questionnaire.first_name %>
+</p>
+<p>
+  <strong>Middle Name:</strong>
+  <%= @questionnaire.middle_name %>
+</p>
+<p>
+  <strong>Ssn:</strong>
+  <%= @questionnaire.ssn %>
+</p>
+<p>
+  <strong>Related:</strong>
+  <%= @questionnaire.related %>
+</p>
+<p>
+  <strong>Primary Contact Number:</strong>
+  <%= @questionnaire.primary_contact_number %>
+</p>
+<p>
+  <strong>Secondary Contact Number:</strong>
+  <%= @questionnaire.secondary_contact_number %>
+</p>
+<p>
+  <strong>Work School Different Name:</strong>
+  <%= @questionnaire.work_school_different_name %>
+</p>
+<p>
+  <strong>Same Address Current Employee:</strong>
+  <%= @questionnaire.same_address_current_employee %>
+</p>
+<p>
+  <strong>Home Address:</strong>
+  <%= @questionnaire.home_address %>
+</p>
+<p>
+  <strong>Zip Code:</strong>
+  <%= @questionnaire.zip_code %>
+</p>
+<p>
+  <strong>How Long At Address:</strong>
+  <%= @questionnaire.how_long_at_address %>
+</p>
+<p>
+  <strong>Unemployment Periods:</strong>
+  <%= @questionnaire.unemployment_periods %>
+</p>
+<p>
+  <strong>Employment Dates And Company Names:</strong>
+  <%= @questionnaire.employment_dates_and_company_names %>
+</p>
+<p>
+  <strong>Schools During Unemployment:</strong>
+  <%= @questionnaire.schools_during_unemployment %>
+</p>
+<p>
+  <strong>Work For Cash:</strong>
+  <%= @questionnaire.work_for_cash %>
+</p>
+<p>
+  <strong>Report Cash Wages:</strong>
+  <%= @questionnaire.report_cash_wages %>
+</p>
+<p>
+  <strong>Terminated Laid Off Details:</strong>
+  <%= @questionnaire.terminated_laid_off_details %>
+</p>
+<p>
+  <strong>Failed Drug Screen:</strong>
+  <%= @questionnaire.failed_drug_screen %>
+</p>
+<p>
+  <strong>Convicted Or Deferred Adjudication:</strong>
+  <%= @questionnaire.convicted_or_deferred_adjudication %>
+</p>
+<p>
+  <strong>Valid Drivers License:</strong>
+  <%= @questionnaire.valid_drivers_license %>
+</p>
+<p>
+  <strong>Why No Valid Dl:</strong>
+  <%= @questionnaire.why_no_valid_dl %>
+</p>
+<p>
+  <strong>License Clear:</strong>
+  <%= @questionnaire.license_clear %>
+</p>
+<p>
+  <strong>Years Driving Experience:</strong>
+  <%= @questionnaire.years_driving_experience %>
+</p>
+<p>
+  <strong>Reliable Transporation:</strong>
+  <%= @questionnaire.reliable_transporation %>
+</p>
+<p>
+  <strong>Refused Airport Badge:</strong>
+  <%= @questionnaire.refused_airport_badge %>
+</p>
+<p>
+  <strong>Check List Physical Tasks:</strong>
+  <%= @questionnaire.check_list_physical_tasks %>
+</p>
+<p>
+  <strong>Check List Work Environments:</strong>
+  <%= @questionnaire.check_list_work_environments %>
+</p>
+<p>
+  <strong>Email Address:</strong>
+  <%= @questionnaire.email_address %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_questionnaire_path(@questionnaire) %> |
+  <%= link_to "Destroy", @questionnaire, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", questionnaires_path %>
+</p>
