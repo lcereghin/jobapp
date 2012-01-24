@@ -1,8 +1,12 @@
+/* @override http://localhost:3000/assets/jobapp.css?body=1 */
+
 body {
   background-color: #4B7399;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
 }
+
+
 
 a img {
   border: none;
@@ -72,4 +76,26 @@ a {
 
 .error_messages ul {
   margin: 0;
+}
+
+legend span{
+	font-size: 16px;
+	font-weight: bold;
+	color: #085591;
+	display: inline-block;
+	margin-top: 14px;
+}
+
+fieldset {
+	background-color: #fff2de;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-right: 8px;
+	margin-left: 6px;
+}
+
+ol {
+	text-indent: 9px;
 }

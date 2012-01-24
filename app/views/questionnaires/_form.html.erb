@@ -2,8 +2,68 @@
  <%= f.error_messages %>
 	<%= f.inputs "Personal Information", :id => "personal" do %>
     <%= f.inputs :date, :first_name, :middle_name, :last_name %>
-<%= f.input :ssn, :label => "SSN", :hint => "Social Security Number"%>
+<%= f.input :email_address, :label => "Contact Email Address" %>
+<%= f.input :ssn, :label => "SSN", :hint => "Social Security Number" %>
+<%= f.input :related, :label => "Are you related to any current AccuFleet Employees?  If yes, list full name(s).", :as => :text, :input_html => { :class => 'autogrow', :rows => 3, :cols => 30, :maxlength => 250  } %>
+<%= f.inputs :primary_contact_number, :secondary_contact_number %>
 <% end %>
-    <%= f.buttons %>
+<%= f.inputs "Address Information", :id => "address" do %>
+<%= f.input :work_school_different_name,  :label => "Have you ever been employed or attended school under a different name? If yes, what name?", :as => :text, :input_html => { :class => 'autogrow', :rows => 3, :cols => 30, :maxlength => 250  }  %>
+
+<%= f.input :same_address_current_employee,  :label => "Do you live at the same address as any current AccuFleet Employees?  If yes, list full name(s).", :as => :text, :input_html => { :class => 'autogrow', :rows => 3, :cols => 30, :maxlength => 250  }  %>
+
+<%= f.input :home_address,  :label => "Home Address", :as => :text, :input_html => { :class => 'autogrow', :rows => 5, :cols => 50, :maxlength => 250  }  %>
+<%= f.input :zip_code %>
+<%= f.input :how_long_at_address, :label => "How long have you lived at this address?", :as => :text, :input_html => { :class => 'autogrow', :rows => 1, :cols => 50, :maxlength => 250  } %>
+<% end %>
+
+<%= f.inputs "Employment Information", :id => "employment"  do %>
+	<%= f.input :unemployment_periods, :label => "Do you have any periods of unemployment in the last 10 years? If yes, please explain with dates of unemployment. " %>
+	<%= f.input :employment_dates_and_company_names, :label => "List employment dates and company names for ALL jobs held in the most recent 5 years" %>
+	<%= f.input :schools_during_unemployment, :label => "Did you attend school during any unemployment periods? If Yes, please name school(s) attended. "%>
+<% end %>
+<%= f.inputs "Other", :id => "other" do  %>
+<%= f.input :work_for_cash, :label => "Did you ever work and get paid in cash? " %>
+<%= f.input :report_cash_wages, :label => "If yes, did you report your cash wages on your federal tax return?" %>
+<%= f.input :terminated_laid_off_details, :label => "Have you ever been terminated or laid off from any of your previous employment positions? If yes, explain details for each. " %>
+<%= f.input :failed_drug_screen, :label => "Have you ever failed a drug or alcohol test related to your employment or related to your driving? " %>
+<%= f.input :convicted_or_deferred_adjudication, :label => "Have you ever been convicted or received deferred adjudication for a DUI, Misdemeanor or Felon? If yes, explain with dates. " %>
+<% end %>
+<%= f.inputs "Driving" do  %>
+<%= f.input :valid_drivers_license, :label => "Do you have a valid driver's license?"%>
+<%= f.input :why_no_valid_dl, :label => "If you do not have a valid driver's license at this time, explain why", :as => :text %>
+<%= f.input :license_clear, :label => "Is your license clear of any citations/tickets for the past five years? If no, list ALL your citations/tickets from present to 2005. " %>
+<%= f.input :years_driving_experience, :label => "How many years/months of driving experience do you have WITH a valid license? " %>
+<%= f.input :reliable_transporation, :label => "Do you have reliable transportation to get to work?" %>
+<% end %>
+<%= f.input :refused_airport_badge, :label => "Have you ever been refused an airport security badge?" %>
+
+<%= f.inputs "Physical Abilities & Environment", :id => "haveyouever"  do %>
+<%= f.input :check_list_physical_tasks, :label => "Please review list  and place a check next to all of the tasks you would have difficulty performing or would not be able to perform at all. (All times are estimated and based on an 8 hour shift.)", :as => :check_boxes,      :collection => [
+"Walking (up to 8 hours per shift)",
+"Standing (up to 8 hours per shift)",
+"Bending at waist (up to 6 hours per shift)",
+"Climbing (Steps & Stairs up to 3 hours per shift)",
+"Reaching (up to 6 hours per shift)",
+"Sitting (up to 6 hours per shift)",
+"Driving (up to 8 hours per shift)",
+"Repetitive Motions (up to 8 hours per shift)",
+"Lifting/ 15-25lbs (up to 8 hours a day)",
+"Heavy Lifting/50 lbs (up to 2 hours per day)",
+"I have no issues with any of the above."
+] %>
+<%= f.input :check_list_work_environments, :label => "Please review list and place a check next to all of the environments that would affect your ability to successfully perform a task. ", :as => :check_boxes,      :collection => ["Heat (above 90 degrees F)",
+"Cold (below 32 degrees F)",
+"Rain",
+"Snow",
+"Fog",
+"Nighttime (lack of light)",
+"Direct Sunlight",
+"Noise (aircraft jet engines)",
+"Chemicals (Allergies/Reactions)",
+"I have no issues with any of the above."]%>
+
+<% end %>
+<%= f.buttons  %>
   <% end %>
  
