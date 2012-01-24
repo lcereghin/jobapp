@@ -1,0 +1,122 @@
+<p>
+     <%= f.label :date %><br />
+     <%= f.date_select :date %>
+   </p>
+   <p>
+     <%= f.label :last_name %><br />
+     <%= f.text_field :last_name %>
+   </p>
+   <p>
+     <%= f.label :first_name %><br />
+     <%= f.text_field :first_name %>
+   </p>
+   <p>
+     <%= f.label :middle_name %><br />
+     <%= f.text_field :middle_name %>
+   </p>
+   <p>
+     <%= f.label :ssn %><br />
+     <%= f.text_field :ssn %>
+   </p>
+   <p>
+     <%= f.label :related %><br />
+     <%= f.text_field :related %>
+   </p>
+   <p>
+     <%= f.label :primary_contact_number %><br />
+     <%= f.text_field :primary_contact_number %>
+   </p>
+   <p>
+     <%= f.label :secondary_contact_number %><br />
+     <%= f.text_field :secondary_contact_number %>
+   </p>
+   <p>
+     <%= f.label :work_school_different_name %><br />
+     <%= f.text_field :work_school_different_name %>
+   </p>
+   <p>
+     <%= f.label :same_address_current_employee %><br />
+     <%= f.text_field :same_address_current_employee %>
+   </p>
+   <p>
+     <%= f.label :home_address %><br />
+     <%= f.text_field :home_address %>
+   </p>
+   <p>
+     <%= f.label :zip_code %><br />
+     <%= f.text_field :zip_code %>
+   </p>
+   <p>
+     <%= f.label :how_long_at_address %><br />
+     <%= f.text_field :how_long_at_address %>
+   </p>
+   <p>
+     <%= f.label :unemployment_periods %><br />
+     <%= f.text_area :unemployment_periods %>
+   </p>
+   <p>
+     <%= f.label :employment_dates_and_company_names %><br />
+     <%= f.text_area :employment_dates_and_company_names %>
+   </p>
+   <p>
+     <%= f.label :schools_during_unemployment %><br />
+     <%= f.text_area :schools_during_unemployment %>
+   </p>
+   <p>
+     <%= f.label :work_for_cash %><br />
+     <%= f.check_box :work_for_cash %>
+   </p>
+   <p>
+     <%= f.label :report_cash_wages %><br />
+     <%= f.text_field :report_cash_wages %>
+   </p>
+   <p>
+     <%= f.label :terminated_laid_off_details %><br />
+     <%= f.text_area :terminated_laid_off_details %>
+   </p>
+   <p>
+     <%= f.label :failed_drug_screen %><br />
+     <%= f.check_box :failed_drug_screen %>
+   </p>
+   <p>
+     <%= f.label :convicted_or_deferred_adjudication %><br />
+     <%= f.text_area :convicted_or_deferred_adjudication %>
+   </p>
+   <p>
+     <%= f.label :valid_drivers_license %><br />
+     <%= f.check_box :valid_drivers_license %>
+   </p>
+   <p>
+     <%= f.label :why_no_valid_dl %><br />
+     <%= f.text_area :why_no_valid_dl %>
+   </p>
+   <p>
+     <%= f.label :license_clear %><br />
+     <%= f.text_field :license_clear %>
+   </p>
+   <p>
+     <%= f.label :years_driving_experience %><br />
+     <%= f.text_field :years_driving_experience %>
+   </p>
+   <p>
+     <%= f.label :reliable_transporation %><br />
+     <%= f.check_box :reliable_transporation %>
+   </p>
+   <p>
+     <%= f.label :refused_airport_badge %><br />
+     <%= f.check_box :refused_airport_badge %>
+   </p>
+   <p>
+     <%= f.label :check_list_physical_tasks %><br />
+     <%= f.text_field :check_list_physical_tasks %>
+   </p>
+   <p>
+     <%= f.label :check_list_work_environments %><br />
+     <%= f.text_field :check_list_work_environments %>
+   </p>
+   <p>
+     <%= f.label :email_address %><br />
+     <%= f.text_field :email_address %>
+   </p>
+   <p><%= f.submit %></p>
+ <% end %>

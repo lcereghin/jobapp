@@ -1,8 +1,9 @@
-
- 
- <%= semantic_form_for @questionnaire do |f| %>
+<%= semantic_form_for @questionnaire do |f| %>
  <%= f.error_messages %>
-    <%= f.inputs %>
+	<%= f.inputs "Personal Information", :id => "personal" do %>
+    <%= f.inputs :date, :first_name, :middle_name, :last_name %>
+<%= f.input :ssn, :label => "SSN", :hint => "Social Security Number"%>
+<% end %>
     <%= f.buttons %>
   <% end %>
  
