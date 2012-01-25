@@ -1,8 +1,8 @@
 Jobapp::Application.routes.draw do
   resources :questionnaires
-match "/thanks(.:format)" => "questionnaires#thanks", :as => :thanks
-   # get "questionnaires#thanks"
-    root :to => 'questionnaires#new'
+
+  
+   root :to => 'questionnaires#new'
 
   # See how all your routes lay out with "rake routes"
 

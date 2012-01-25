@@ -39,8 +39,29 @@
 <%= f.input :refused_airport_badge, :label => "Have you ever been refused an airport security badge?" %>
 
 <%= f.inputs "Physical Abilities & Environment", :id => "haveyouever"  do %>
-<%= f.input :check_list_physical_tasks %>
-<%= f.input :check_list_work_environments, :label => "Please review list and place a check next to all of the environments that would affect your ability to successfully perform a task. ", :as => :select, :collection => { "Heat (above 90 degrees F)" => "Heat (above 90 degrees F)","Cold (below 32 degrees F)" => "Cold (below 32 degrees F)","Rain" => "Rain","Snow" => "Snow","Fog" => "Fog","Nighttime (lack of light)" => "Nighttime (lack of light)","Direct Sunlight" => "Direct Sunlight","Noise (aircraft jet engines)" => "Noise (aircraft jet engines)","Chemicals (Allergies/Reactions)" => "Chemicals (Allergies/Reactions)","I have no issues with any of the above." => "I have no issues with any of the above." }, :input_html => { :multiple => true } %>
+<%= f.input :check_list_physical_tasks, :label => "Please review list  and place a check next to all of the tasks you would have difficulty performing or would not be able to perform at all. (All times are estimated and based on an 8 hour shift.)", :as => :check_boxes,      :collection => [
+"Walking (up to 8 hours per shift)",
+"Standing (up to 8 hours per shift)",
+"Bending at waist (up to 6 hours per shift)",
+"Climbing (Steps & Stairs up to 3 hours per shift)",
+"Reaching (up to 6 hours per shift)",
+"Sitting (up to 6 hours per shift)",
+"Driving (up to 8 hours per shift)",
+"Repetitive Motions (up to 8 hours per shift)",
+"Lifting/ 15-25lbs (up to 8 hours a day)",
+"Heavy Lifting/50 lbs (up to 2 hours per day)",
+"I have no issues with any of the above."
+] %>
+<%= f.input :check_list_work_environments, :label => "Please review list and place a check next to all of the environments that would affect your ability to successfully perform a task. ", :as => :check_boxes,      :collection => ["Heat (above 90 degrees F)",
+"Cold (below 32 degrees F)",
+"Rain",
+"Snow",
+"Fog",
+"Nighttime (lack of light)",
+"Direct Sunlight",
+"Noise (aircraft jet engines)",
+"Chemicals (Allergies/Reactions)",
+"I have no issues with any of the above."]%>
 
 <% end %>
 <%= f.buttons  %>
