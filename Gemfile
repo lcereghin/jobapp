@@ -4,10 +4,15 @@ gem 'rails', '3.1.3'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
-group :test do
+
+<<<<<<< HEAD
 #gem 'sqlite3'
-end
 gem "pg"
+=======
+group :development do
+gem 'sqlite3'
+end
+>>>>>>> Fixing that now hold on
 gem "nifty-generators", :group => :development
 gem 'activeadmin'
 gem 'formtastic'

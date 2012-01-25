@@ -14,11 +14,15 @@ class QuestionnairesController < ApplicationController
   def create
     @questionnaire = Questionnaire.new(params[:questionnaire])
     if @questionnaire.save
-      redirect_to root_url, :notice => "Successfully created questionnaire."
+      redirect_to thanks_path, :notice => "Successfully created questionnaire."
     else
       render :action => 'new'
     end
     # redirect_to root_url
+  end
+  
+  def thanks
+    
   end
 
   # def edit
